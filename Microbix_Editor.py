@@ -12,14 +12,14 @@ import glob
 # 1. THE AUTO-LOCATOR & HOTFIXES
 # ==========================================
 print("=" * 70)
-print("💎 BOOTING MICROBIX V4.2 PLATINUM ENGINE...")
+print(" BOOTING MICROBIX V4.2 PLATINUM ENGINE...")
 print("=" * 70)
 
 magick_paths = glob.glob(r"C:\Program Files\ImageMagick-*\magick.exe")
 if magick_paths:
     os.environ["IMAGEMAGICK_BINARY"] = magick_paths[0]
 else:
-    print("❌ [CRITICAL] ImageMagick Engine not found.")
+    print(" [CRITICAL] ImageMagick Engine not found.")
     sys.exit()
 
 import PIL.Image
@@ -30,7 +30,7 @@ try:
     from moviepy.editor import VideoFileClip, concatenate_videoclips, TextClip, CompositeVideoClip
     import moviepy.video.fx.all as vfx 
 except ImportError as e:
-    print(f"\n❌ [CRITICAL ERROR] Library missing.\n{e}")
+    print(f"\n [CRITICAL ERROR] Library missing.\n{e}")
     sys.exit()
 
 # ==========================================
@@ -78,7 +78,7 @@ def apply_platinum_fx(clip):
 # ==========================================
 def run_platinum_processor():
     video_files = []
-    print("\n🎬 [DIRECTOR'S QUEUE: PLATINUM]")
+    print("\n [DIRECTOR'S QUEUE: PLATINUM]")
     print("Add your files. Type 'START' to render.\n")
     
     while True:
@@ -88,38 +88,38 @@ def run_platinum_processor():
             break
         if os.path.exists(file_name):
             video_files.append(file_name)
-            print(f"  ✅ INGESTED: '{file_name}'")
+            print(f"   INGESTED: '{file_name}'")
         else:
-            print(f"  ❌ ERROR: File not found.")
+            print(f"   ERROR: File not found.")
 
     processed_clips = []
     print("-> Forging Premium Intro...")
     processed_clips.append(create_premium_title("M I C R O B I X", 3.5))
 
     for index, file in enumerate(video_files, start=1):
-        print(f"💎 Ramping Clip {index}/{len(video_files)}: {file}")
+        print(f" Ramping Clip {index}/{len(video_files)}: {file}")
         try:
             raw_clip = VideoFileClip(file).resize(height=1080)
             mid_point = raw_clip.duration / 2
             hero_shot = raw_clip.subclip(mid_point - 2.0, mid_point + 2.0)
             processed_clips.append(apply_platinum_fx(hero_shot))
         except Exception as e:
-            print(f"   ⚠️ Error: {e}")
+            print(f"    Error: {e}")
 
     from datetime import datetime
     year = datetime.now().strftime('%Y')
     processed_clips.append(create_premium_title(f"© {year} MICROBIX MEDIA", 3.5, is_outro=True))
 
-    print("\n🔗 Compiling Platinum Master...")
+    print("\n Compiling Platinum Master...")
     final_master = concatenate_videoclips(processed_clips, method="compose")
     output_filename = f"Microbix_PLATINUM_V4_2.mp4"
 
     try:
         # Final export
         final_master.write_videofile(output_filename, fps=30, codec="libx264", bitrate="25000k")
-        print("\n✨ PLATINUM RENDER SUCCESSFUL!")
+        print("\n PLATINUM RENDER SUCCESSFUL!")
     except Exception as e:
-        print(f"\n❌ [RENDER CRASH] {e}")
+        print(f"\n [RENDER CRASH] {e}")
 
     input("\nPress Enter to exit...")
 
