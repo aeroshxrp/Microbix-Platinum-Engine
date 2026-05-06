@@ -8,9 +8,7 @@ import os
 import sys
 import glob
 
-# ==========================================
-# 1. THE AUTO-LOCATOR & HOTFIXES
-# ==========================================
+
 print("=" * 70)
 print(" BOOTING MICROBIX V4.2 PLATINUM ENGINE...")
 print("=" * 70)
@@ -33,9 +31,7 @@ except ImportError as e:
     print(f"\n [CRITICAL ERROR] Library missing.\n{e}")
     sys.exit()
 
-# ==========================================
-# ULTRA-PREMIUM BRANDING (SIMPLIFIED FADES)
-# ==========================================
+
 def create_premium_title(text, duration, is_outro=False):
     from moviepy.video.VideoClip import ColorClip
     base = ColorClip(size=(1920, 1080), color=(10,10,10)).set_duration(duration)
@@ -51,9 +47,7 @@ def create_premium_title(text, duration, is_outro=False):
     
     return CompositeVideoClip([base, main_title]).fx(vfx.fadein, 0.5).fx(vfx.fadeout, 2)
 
-# ==========================================
-# THE KINETIC FX ENGINE (SIMPLIFIED FADES)
-# ==========================================
+
 def apply_platinum_fx(clip):
     c = clip.without_audio()
     duration = c.duration
@@ -73,9 +67,7 @@ def apply_platinum_fx(clip):
     
     return ramped_clip
 
-# ==========================================
-# MAIN EXECUTION
-# ==========================================
+
 def run_platinum_processor():
     video_files = []
     print("\n [DIRECTOR'S QUEUE: PLATINUM]")
