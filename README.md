@@ -3,7 +3,7 @@
 **Automated Cinematic Drone Video Pipeline**
 
 ## Overview
-Microbix is a high-performance Python-based video editing engine designed for DJI drone footage. It uses mathematical slicing and speed-ramping to turn raw flight data into premium agency-level teasers.
+Microbix is a high-performance Python-based video editing engine designed for drone footage & Camera footage. It uses mathematical slicing and speed-ramping to turn raw flight data into premium agency-level teasers.
 
 ## Features
 - **Dynamic Speed Ramping:** Fast-Slow-Fast kinetic transitions.
