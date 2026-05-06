@@ -16,6 +16,6 @@ Microbix is a high-performance Python-based video editing engine designed for DJ
 - MoviePy (Video Composition)
 - ImageMagick (Text Rendering Engine)
 - Pillow (Image Processing)
-
+  
 ---
 © 2026 Nidhish Karbhari | Microbix Media Group
