@@ -1,0 +1,9 @@
+ HOW TO RUN----------
+  First, Download the Microbix_Editor.py in Desktop. Make sure you have python installed!
+  Second, Add the clips you want to edit, (EX: DJI_001). Make sure it supports or errors will appear.
+  Third, Run CMD in certain Directory you have placed the files in, run the program by typing:
+  python Microbix_Editor.py
+  Fourth, After running the program will ask you for clip file names (MAKE SURE THE CLIPS ARE IN THE SAME DIRECTORY AS THE PROGRAM),  
+Make sure your file name is exactly matching the file name that you will paste, Add as many files as you want, once done,
+ Type START, and the program will run. Sit back and relax!
+
