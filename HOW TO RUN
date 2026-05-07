@@ -1,5 +1,5 @@
  HOW TO RUN----------
-  First, Download the Microbix_Editor.py in Desktop. Make sure you have python installed!
+  First, Download the Microbix_Editor.py in Desktop. Make sure you have python installed! In python make sure you have Movie python installed and ImageMagick
   Second, Add the clips you want to edit, (EX: DJI_001). Make sure it supports or errors will appear.
   Third, Run CMD in certain Directory you have placed the files in, run the program by typing:
   python Microbix_Editor.py
